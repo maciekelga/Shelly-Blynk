@@ -8,6 +8,6 @@ Code is prepared for one input and one relay, but in simple way is option to ext
 2. https://github.com/blynkkk/blynk-library
 3. https://github.com/esp8266/Arduino/tree/master/libraries/ESP8266WiFi
 
-## Another options
+## Next revision
 In next revision I like to add temperature reading and power meter readings.
 At the moment I have not enought information, if You have anything what can help me please contact me.
