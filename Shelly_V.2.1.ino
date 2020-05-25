@@ -106,7 +106,14 @@ void ADE7953_readings (){
   } 
   current_ch2 = Ade7953_getCurrent(2);
   current_ch2 = current_ch2/100;
-
+  if(current_ch2 <=0.02 and digitalRead(relay_2)== 1) 
+  { 
+   if (notified_2 == 0)
+   {
+    Blynk.notify("Brak obciążenia na kanale 2");
+    notified_2 = 1;
+   }
+  } 
   active_power_ch1 = Ade7953_getActivePower(1);
   active_power_ch2 = Ade7953_getActivePower(2);
   Blynk.virtualWrite(V10, voltage); 
@@ -151,5 +158,9 @@ BLYNK_WRITE(V2) //Virtual pin assigned to first switch input
   if(relay_2_status != digitalRead(relay_1)) //If value is different than output synchronize to widget
   { 
   Blynk.virtualWrite(V2, digitalRead(relay_2));
+    if (relay_2_status == 0)
+  {
+    notified_2 = 0;
+  }
   }
 }
