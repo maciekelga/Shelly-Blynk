@@ -12,3 +12,6 @@ Code is prepared for one input and one relay, but in simple way is option to ext
 Basic version.
 ## V2.1
 Version extended of voltage, current and power measurment. As well added notification when relay is on and there is no load on it - than it send notification to Blynk app.
+Measurment on ADE7953 is based on library
+https://github.com/MacWyznawca/ADE7953_ESP8266
+but I modyfied a little bit for this project so better download it from my source.
